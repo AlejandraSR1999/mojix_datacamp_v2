@@ -1,24 +1,12 @@
 import streamlit as st
-import yfinance as yf
-import pandas as pd 
 
-st.write("MAKE YOUR FIRST SIMPLE FINANCE APP ON STREAMLIT")
+
+st.write("MAKE YOUR FIRST SIMPLE APP ON STREAMLIT")
 st.write("""
-# Financial App 
+# Dashboard App 
 
 """)
 
 
-st.write("First we will use Amazon Stocks for the example")
+st.write("The dashboard is like the gauges in the cockpit of an airplane (although it should be a bit simpler!).\n it's a super-powerful tool for getting insights from data and centralizing the KPIs you need to know what's really going on with your business. \n In this article we are going to see what a dashboard is, why it is a good idea to implement it in your company and the main metrics to include according to your objectives")
 
-stock = 'AMZN'
-
-# Get stock data
-get_stock_data = yf.Ticker(stock)
-
-# Set the time line of your data
-ticket_df = get_stock_data.history(period='1d', start='2021-1-02', end='2021-12-12')
-
-# Show your data in line chart
-st.line_chart(ticket_df.Close)
-st.line_chart(ticket_df.Volume)
